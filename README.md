@@ -90,6 +90,9 @@ Configure Nginx to reverse proxy the n8n web interface:
             proxy_cache off;
             proxy_set_header Upgrade $http_upgrade;
             proxy_set_header Connection "upgrade";
+            proxy_set_header Host $host;
+            proxy_cache_bypass $http_upgrade;
+            proxy_set_header X-Real-IP $remote_addr;
         }
     }
     ```
