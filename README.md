@@ -32,27 +32,27 @@ This guide provides step-by-step instructions to self-host [n8n](https://n8n.io)
 **Run the following command to start n8n in Docker. Replace your-domain.com with your actual domain name:**
 
 ```bash
-    sudo docker run -d --restart unless-stopped -it \
-    --name n8n \
-    -p 5678:5678 \
-    -e N8N_HOST="your-domain.com" \
-    -e WEBHOOK_TUNNEL_URL="https://your-domain.com/" \
-    -e WEBHOOK_URL="https://your-domain.com/" \
-    -v ~/.n8n:/root/.n8n \
-    n8nio/n8n
+sudo docker run -d --restart unless-stopped \
+  --name n8n \
+  -p 5678:5678 \
+  -e N8N_HOST="your-domain.com" \
+  -e N8N_PROTOCOL="https" \
+  -e WEBHOOK_URL="https://your-domain.com" \
+  -v n8n_data:/home/node/.n8n \
+  docker.n8n.io/n8nio/n8n
 ```
 
 **Or if you are using a subdomain, it should look like this:**
 
 ```bash
-    sudo docker run -d --restart unless-stopped -it \
-    --name n8n \
-    -p 5678:5678 \
-    -e N8N_HOST="subdomain.your-domain.com" \
-    -e WEBHOOK_TUNNEL_URL="https://subdomain.your-domain.com/" \
-    -e WEBHOOK_URL="https://subdomain.your-domain.com/" \
-    -v ~/.n8n:/root/.n8n \
-    n8nio/n8n
+sudo docker run -d --restart unless-stopped \
+  --name n8n \
+  -p 5678:5678 \
+  -e N8N_HOST="subdomain.your-domain.com" \
+  -e N8N_PROTOCOL="https" \
+  -e WEBHOOK_URL="https://subdomain.your-domain.com" \
+  -v n8n_data:/home/node/.n8n \
+  docker.n8n.io/n8nio/n8n
 ```
 
 
@@ -138,3 +138,11 @@ IMPORTANT: Make sure you follow the above steps in order. Step 5 will modify you
 
 By using Nginx and Certbot, you ensure that your n8n instance is securely accessible over the internet with HTTPS.
 
+
+## Step 6: Reserve Static IP
+
+Goto Google Cloud -> VPC Network -> IP Addresses
+
+Find your External IP Address of Virtual Machine Created 
+
+![image](/static-ip.png)
