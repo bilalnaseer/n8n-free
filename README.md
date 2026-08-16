@@ -146,3 +146,17 @@ Goto Google Cloud -> VPC Network -> IP Addresses
 Find your External IP Address of Virtual Machine Created 
 
 ![image](/static-ip.png)
+
+
+## Updating n8n
+
+New n8n versions are released regularly. **Do not** just pull a new image and hope
+for the best — n8n runs one-way database migrations on startup, so once a newer
+version has upgraded your database, the old version can no longer start against it.
+Always back up first.
+
+👉 **[Follow the update guide here: update/README.MD](update/README.MD)**
+
+It covers backing up your data, taking a Compute Engine snapshot, swapping the
+container to the new version, and what to do if your workflows don't appear in the
+UI afterwards.
