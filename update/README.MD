@@ -1,3 +1,6 @@
+# Youtube Tutorial 
+[![Install N8N For Free](https://img.youtube.com/vi/d4MrLl5pAuU/0.jpg)](https://www.youtube.com/watch?v=d4MrLl5pAuU)
+
 # Updating n8n on Google Cloud
 
 Instructions for updating an existing n8n install that was set up using the
