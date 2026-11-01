@@ -1,5 +1,5 @@
 # Youtube Tutorial 
-[![Install N8N For Free](https://img.youtube.com/vi/x49ZiJDIVPQ/0.jpg)](https://www.youtube.com/watch?v=x49ZiJDIVPQ)
+[![Install N8N in Google Cloud](https://img.youtube.com/vi/He3uW_t0y2I/maxresdefault.jpg)](https://youtu.be/He3uW_t0y2I)
 
 
 # Self-Hosting SSL enabled N8N on a Linux Server
